@@ -9,12 +9,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/">eCommerce</Link>
-        <Link to="/add-product">Add a product</Link>
-        <Link to="/cart">Cart ({cartCount})</Link>
+        <Link to="/">MyLogoFiller</Link>
+        <Link to="/add-product">Add Product ➕</Link>
+        <Link to="/cart">Cart 🛒 ({cartCount})</Link>
       </div>
       <div className="navbar-right">
-        {"E.com@shankhya.com"}
+        {/* {"E.com@shankhya.com"} */}
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fprofile%2520picture%2F&psig=AOvVaw1cxlUd4kDMkwsoCNZgR-g4&ust=1738612038451000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPiy0N7gpYsDFQAAAAAdAAAAABAE" alt="E.com@shankhya.com"/>
+      
       </div>
     </nav>
   );
