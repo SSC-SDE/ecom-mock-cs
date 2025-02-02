@@ -65,7 +65,7 @@ This project aims to create the frontend for an eCommerce website. The applicati
 
 - **React Router**: (Optional) For routing between different pages.
 
-- **JSON Server**: For creating a dummy eCommerce API.
+- A dummy eCommerce API.
 
 
 ## Getting Started
