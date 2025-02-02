@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editProduct } from "../slices/productSlice";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom"; 
 
 const ProductCard = ({ product, onDelete }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -31,7 +32,9 @@ const ProductCard = ({ product, onDelete }) => {
         <img src={product.image} alt={product.name} className="product-image" />
         <h3 className="product-name">
           {!isEditing ? (
-            product.name
+            <Link to={`/products/${product.id}`} className="product-link">
+            {product.name}
+            </Link>
           ) : (
             <input
               type="text"

@@ -14,31 +14,26 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <Provider store={store}>
-      {/* PersistGate delays rendering until Redux state is rehydrated */}
-      <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
-      <ToastContainer position="top-right" autoClose={3000} />
-        <Router>
+      <Router>
+        <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+          <ToastContainer position="top-right" autoClose={3000} />
           <Navbar />
           <div className="content">
-          <main>
-            <Routes>
-              {/* Main Products Page */}
-              <Route path="/" element={<ProductsPage />} />
-
-              {/* Other Pages */}
-              <Route path="/add-product" element={<AddProductPage />} />
-              <Route path="/products/:id" element={<ProductDetailPage />} />
-              <Route path="/cart" element={<CartPage />} />
-
-              {/* Redirect any unknown routes */}
-              <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-          </main>
+            <main>
+              <Routes>
+                <Route path="/" element={<ProductsPage />} />
+                <Route path="/add-product" element={<AddProductPage />} />
+                <Route path="/products/:id" element={<ProductDetailPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
+            </main>
           </div>
-        </Router>
-      </PersistGate>
+        </PersistGate>
+      </Router>
     </Provider>
   );
 }
+
 
 export default App;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../slices/productSlice';
 import { toast } from 'react-toastify';
+import './addProductPage.css'; // Import the CSS file
 
 const AddProductPage = () => {
   const [product, setProduct] = useState({ name: '', price: '', description: '', image: '' });
@@ -28,38 +29,43 @@ const AddProductPage = () => {
   };
 
   return (
-    <div className="add-product">
-      <h2>Add a New Product</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Product Name"
-          value={product.name}
-          onChange={handleInputChange}
-        />
-        <input
-          type="number"
-          name="price"
-          placeholder="Price"
-          value={product.price}
-          onChange={handleInputChange}
-        />
-        <textarea
-          name="description"
-          placeholder="Product Description"
-          value={product.description}
-          onChange={handleInputChange}
-        ></textarea>
-        <input
-          type="text"
-          name="image"
-          placeholder="Image URL"
-          value={product.image}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Add Product</button>
-      </form>
+    <div className="container">
+      <div className="form-box">
+        <h2>Add a New Product</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Product Name"
+            value={product.name}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            type="number"
+            name="price"
+            placeholder="Price"
+            value={product.price}
+            onChange={handleInputChange}
+            required
+          />
+          <textarea
+            name="description"
+            placeholder="Product Description"
+            value={product.description}
+            onChange={handleInputChange}
+            required
+          ></textarea>
+          <input
+            type="text"
+            name="image"
+            placeholder="Image URL"
+            value={product.image}
+            onChange={handleInputChange}
+          />
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
     </div>
   );
 };
