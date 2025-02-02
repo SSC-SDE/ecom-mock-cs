@@ -16,6 +16,7 @@ function App() {
       <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
         <Router>
           <Navbar />
+          <div className="content">
           <main>
             <Routes>
               {/* Main Products Page */}
@@ -30,6 +31,7 @@ function App() {
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>
+          </div>
         </Router>
       </PersistGate>
     </Provider>

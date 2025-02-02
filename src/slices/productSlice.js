@@ -1,10 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'https://my-json-server.typicode.com/your-repo/db/products';
+const API_URL = 'https://my-json-server.typicode.com/SSC-SDE/dummy-ecom-data/Products';
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
   const response = await axios.get(API_URL);
+  console.log("response", response);
   return response.data;
 });
 
