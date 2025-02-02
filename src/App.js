@@ -8,12 +8,15 @@ import ProductsPage from './pages/productsPage';
 import AddProductPage from './pages/addProductPage';
 import ProductDetailPage from './pages/productDetailPage';
 import CartPage from './pages/cart';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <Provider store={store}>
       {/* PersistGate delays rendering until Redux state is rehydrated */}
       <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+      <ToastContainer position="top-right" autoClose={3000} />
         <Router>
           <Navbar />
           <div className="content">

@@ -145,3 +145,31 @@ code {
   background: #dc3545;
 }
 
+.sort-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.sort-button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sort-button:hover {
+  background: linear-gradient(135deg, #0056b3, #00408a);
+  transform: scale(1.05);
+}
+
+.sort-button:active {
+  transform: scale(0.95);
+}
