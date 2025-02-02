@@ -12,6 +12,7 @@ const ProductCard = ({ product, onDelete }) => {
     price: product.price,
     ratings: product.ratings,
   });
+  const [isZoomed, setIsZoomed] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -26,14 +27,23 @@ const ProductCard = ({ product, onDelete }) => {
     setIsEditing(false);
   };
 
+  const handleImageClick = () => {
+    setIsZoomed(!isZoomed);
+  };
+
   return (
     <div className="product-card">
       <div className="product-details">
-        <img src={product.imageUrl} alt={product.name} className="product-image" />
+        <img 
+          src={product.imageUrl} 
+          alt={product.name} 
+          className={`product-image ${isZoomed ? 'zoomed' : ''}`} 
+          onClick={handleImageClick}
+        />
         <h3 className="product-name">
           {!isEditing ? (
             <Link to={`/products/${product.id}`} className="product-link">
-            {product.name}
+              {product.name}
             </Link>
           ) : (
             <input
@@ -89,7 +99,6 @@ const ProductCard = ({ product, onDelete }) => {
             <>
               <button
                 onClick={() => setIsEditing(true)}
-                
               >
                 Edit ✏️
               </button>
@@ -100,7 +109,7 @@ const ProductCard = ({ product, onDelete }) => {
           ) : (
             <>
               <button onClick={handleSave} className="product-button">
-              Save 💾
+                Save 💾
               </button>
               <button
                 onClick={() => setIsEditing(false)}
@@ -114,5 +123,6 @@ const ProductCard = ({ product, onDelete }) => {
       </div>
     </div>
   );
-}
+};
+
 export default ProductCard;
