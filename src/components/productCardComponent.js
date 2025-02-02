@@ -29,7 +29,7 @@ const ProductCard = ({ product, onDelete }) => {
   return (
     <div className="product-card">
       <div className="product-details">
-        <img src={product.image} alt={product.name} className="product-image" />
+        <img src={product.imageUrl} alt={product.name} className="product-image" />
         <h3 className="product-name">
           {!isEditing ? (
             <Link to={`/products/${product.id}`} className="product-link">
@@ -89,24 +89,24 @@ const ProductCard = ({ product, onDelete }) => {
             <>
               <button
                 onClick={() => setIsEditing(true)}
-                className="product-button"
+                
               >
-                Edit
+                Edit ✏️
               </button>
-              <button onClick={() => onDelete(product.id)} className="product-button">
-                Delete
+              <button onClick={() => onDelete(product.id)}>
+                Delete 🗑️
               </button>
             </>
           ) : (
             <>
               <button onClick={handleSave} className="product-button">
-                Save
+              Save 💾
               </button>
               <button
                 onClick={() => setIsEditing(false)}
                 className="product-button"
               >
-                Cancel
+                Cancel ❌
               </button>
             </>
           )}

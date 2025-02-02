@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link to="/cart">Cart ({cartCount})</Link>
       </div>
       <div className="navbar-right">
-        {"username"}
+        {"E.com@shankhya.com"}
       </div>
     </nav>
   );

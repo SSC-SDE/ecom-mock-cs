@@ -29,7 +29,7 @@ const ProductDetailPage = () => {
   return (
     <div className="product-detail-container">
       <div className="product-detail-card">
-        <img src={product.image} alt={product.name} className="product-image" />
+        <img src={product.imageUrl} alt={product.name} className="product-image" />
         <div className="product-info">
           <h2 className="product-title">{product.name}</h2>
           <p className="product-description">{product.description}</p>
