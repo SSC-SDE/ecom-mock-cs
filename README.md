@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# eCommerce Website Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Problem Statement
 
-In the project directory, you can run:
+This project aims to create the frontend for an eCommerce website. The application allows users to browse products, edit product details, manage a shopping cart, and more. The design is based on provided mockups.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Navbar**: 
 
-### `npm test`
+  - Displays the cart items count.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - Provides relevant navigation links.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **All Products Page**: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Fetches and displays a list of products from a dummy API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Each product can be edited inline by clicking the "pencil" button.
 
-### `npm run eject`
+  - Notifications are shown upon successful editing or deletion of a product.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - Products can be deleted with a delete button, which also triggers a notification.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - A sort button allows sorting products by price, with an option to remove the sort.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Add to Cart**: 
 
-## Learn More
+  - Users can add products to their cart from the product list and product detail pages.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Create Page**: 
 
-### Code Splitting
+  - Users can add new products to the database via an "Add" button, with notifications for success or failure.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+- **Product Detail Page**: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  - Displays all details of a selected product.
 
-### Making a Progressive Web App
+  - Includes an option to add the product to the cart.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+- **Cart Page**: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  - Shows all items currently in the cart.
 
-### Deployment
+  - Handles errors and success alerts appropriately.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+- **Error Handling**: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - Displays alerts for errors from the API and other actions.
+
+
+## Technologies Used
+
+- **React**: For building the user interface.
+
+- **Redux**: For state management.
+
+- **React Router**: (Optional) For routing between different pages.
+
+- **JSON Server**: For creating a dummy eCommerce API.
+
+
+## Getting Started
+
+
+### Prerequisites
+
+- Node.js and npm installed on your machine.
