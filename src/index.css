@@ -67,7 +67,7 @@ code {
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  height: 180px; /* Adjust based on your design */
+  height: 200px; /* Adjust based on your design */
 }
 
 
@@ -183,4 +183,19 @@ code {
 
 .sort-button:active {
   transform: scale(0.95);
+}
+
+
+.reset-sort-button {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #dc3545;
+  transition: color 0.3s ease;
+}
+
+.reset-sort-button:hover {
+  color: #c82333;
 }

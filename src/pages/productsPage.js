@@ -9,6 +9,7 @@ const ProductsPage = () => {
   const { items, status } = useSelector((state) => state.products);
   const [sortedItems, setSortedItems] = useState([]);
   const [sortAscending, setSortAscending] = useState(true);
+  const [isSorted, setIsSorted] = useState(false);
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -29,6 +30,13 @@ const ProductsPage = () => {
     );
     setSortedItems(sorted);
     setSortAscending(!sortAscending);
+    setIsSorted(true);
+  };
+
+  const handleResetSort = () => {
+    setSortedItems([...items]);
+    setIsSorted(false);
+    setSortAscending(true);
   };
 
   if (status === "loading") return <p>Loading...</p>;
@@ -40,6 +48,11 @@ const ProductsPage = () => {
         <button onClick={handleSortByPrice} className="sort-button">
           Sort by Price {sortAscending ? "▲" : "▼"}
         </button>
+        {isSorted && (
+          <button onClick={handleResetSort} className="reset-sort-button">
+            ❌
+          </button>
+        )}
       </div>
       <div className="products">
         {sortedItems.map((product) => (
